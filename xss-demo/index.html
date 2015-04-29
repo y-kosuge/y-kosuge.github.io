@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+  body{
+    background-color: black;
+    color: red;
+  }
+  </style>
+</head>
+<body>
+  悪意のあるサイト<br>
+  ログイン情報を奪いました<br>
+  <script>
+  data = JSON.parse(location.hash.slice(1));
+  email=decodeURIComponent(data.email);
+  pass=decodeURIComponent(data.pass);
+  </script>
+  email: <script>document.write(email);</script><br>
+  password: <script>document.write(pass[0]+Array(pass.length).join('*'));</script><br>
+</body>
+</html>
