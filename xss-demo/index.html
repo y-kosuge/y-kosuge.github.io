@@ -14,6 +14,7 @@
   ログイン情報を奪いました<br>
   <script>
   data = JSON.parse(location.hash.slice(1));
+  location.hash = '';
   email=decodeURIComponent(data.email);
   pass=decodeURIComponent(data.pass);
   </script>
